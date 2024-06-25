@@ -11,16 +11,17 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'search/:searchTerm', component: HomeComponent },
   { path: 'tag/:tag', component: HomeComponent },
-  {path:'food/:id', component:FoodPageComponent},
-  {path:'cart-page', component: CartPageComponent},
-  {path:'login', component: LoginPageComponent},
-  {path:'register', component: RegisterPageComponent},
-  {path:'checkout', component: CheckoutPageComponent, canActivate:[AuthGuard]},
-  {path:'payment', component: PaymentPageComponent, canActivate:[AuthGuard]},
-  {path:'track/:orderId', component: OrderTrackPageComponent, canActivate:[AuthGuard]},
+  { path: 'food/:id', component: FoodPageComponent },
+  { path: 'cart-page', component: CartPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent },
+  { path: 'checkout', component: CheckoutPageComponent, canActivate: [AuthGuard] },
+  { path: 'payment', component: PaymentPageComponent, canActivate: [AuthGuard] },
+  { path: 'track/:orderId', component: OrderTrackPageComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
