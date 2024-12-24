@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  margin-top: 3rem;
+  height: calc(100vh - 3.3rem);
+  background-image: url(../../../../assets/food_fusion_login.webp);
 }
 
 .details{
